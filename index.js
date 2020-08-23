@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {
   const sounds = document.querySelectorAll(".sound");
   const pads = document.querySelectorAll(".pads div");
+  const padstop = document.querySelectorAll(".padstop div")
   const visual = document.querySelector(".visual");
   const colors = [
     "#60d394",
@@ -17,6 +18,7 @@ window.addEventListener("load", () => {
       sounds[index].play();
       sounds[index].currentTime = 0;
       createBubble(index);
+      drawSinusWave();
     });
   });
 
